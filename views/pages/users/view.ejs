@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="loading" lang="en">
+<head>
+    <%- include('../../partials/head') %>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+</head>
+<body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-color="bg-chartbg" data-col="2-columns">
+   <%- include('../../partials/nav_header') %>
+   <%- include('../../partials/nav_main') %>
+ 	
+	<div class="app-content content">
+	 	<div class="content-wrapper">
+	 		<div class="content-wrapper-before">
+	 			
+	 		</div>
+			<div class="content-header row">
+            <div class="content-header-left col-md-4 col-12 mb-2">
+                <h3 class="content-header-title">View User Detail</h3>
+            </div>
+				<div class="content-header-right col-md-8 col-12">
+					<div class="breadcrumbs-top float-md-right">
+						<ol class="breadcrumb">
+                     <li class="breadcrumb-item"><a href="/">Dashboard</a>
+                     </li>
+                     <li class="breadcrumb-item active"><a href="/users">User</a>
+                     </li>
+                     <li class="breadcrumb-item active">View
+                     </li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="content-body col-12">
+				<div class="row">
+					<div class="col-lg-5 col-md-5 col-sm-12">
+						<div class="card">
+							<div class="card-body" style="">
+								<div class="avatar">
+									<img id="user-image" src="http://cdn.thaldia.com/avatar/avatar.png" style=" width: 100%; "/>
+								</div>		
+								<br><br>
+								<dl class="row">
+									<dt class="col-sm-4">Nama</dt>
+									<dd class="col-sm-8" id="user-name">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Email</dt>
+									<dd class="col-sm-8" id="user-email">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Jenis Kelamin</dt>
+									<dd class="col-sm-8" id="user-gender">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Tanggal Lahir</dt>
+									<dd class="col-sm-8" id="user-birthday">-</dd>
+								</dl>
+								<hr>
+								<dl class="row">
+									<dt class="col-sm-4">Pertama didiagnosa</dt>
+									<dd class="col-sm-8" id="user-first-diagnosa">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Hipertensi</dt>
+									<dd class="col-sm-8" id="user-hipertensi">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Diabetes</dt>
+									<dd class="col-sm-8" id="user-diabetes">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Hiperkolesterol</dt>
+									<dd class="col-sm-8" id="user-hiperkolesterol">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Kelainan Jantung Bawaan</dt>
+									<dd class="col-sm-8" id="user-kelainanjantungbawaan">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Penyakit Lainnya</dt>
+									<dd class="col-sm-8" id="user-lain">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Activated</dt>
+									<dd class="col-sm-8" id="user-published">True</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-7 col-md-7 col-sm-12">
+						<div class="card">
+							<div class="card-body">
+								<dl class="row">
+									<dt class="col-sm-4">Alamat</dt>
+									<dd class="col-sm-8" id="user-address">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Kecamatan</dt>
+									<dd class="col-sm-8" id="user-district">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Kota/Kab</dt>
+									<dd class="col-sm-8" id="user-city">-</dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-4">Provinsi</dt>
+									<dd class="col-sm-8" id="user-province">-</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card">
+								<div class="card-header">
+									<strong>Konsumsi/Jadwal Obat</strong>
+								</div>
+								<div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="dataDrug" class="table table-striped display compact" cellspacing="0" title="Konsumsi/Jadwal Obat"></table>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<strong>Riwayat Perawatan</strong>
+							</div>
+							<div class="card">
+								<div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="homeCare" class="table table-striped display compact" cellspacing="0"></table>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<strong>Riwayat Perawatan Dokter</strong>
+							</div>
+							<div class="card">
+								<div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="homeActivity" class="table table-striped display compact" cellspacing="0"></table>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+   <%- include('../../partials/footer') %>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+ 	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+ 	<script src="/function/global.js" type="text/javascript"></script>
+ 	<script src="/function/user-function.js" type="text/javascript"></script>
+ 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"/>
+</body>
+</html>

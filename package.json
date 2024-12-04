@@ -1,0 +1,20 @@
+{
+    "name": "admin-thaldia-dashboard",
+    "version": "1.0.0",
+    "description": "",
+    "main": "heart-app.js",
+    "scripts": {
+        "auto": "npx nodemon heart-admin.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.3.1",
+        "ejs": "^3.1.3",
+        "express": "^4.17.1",
+        "gasparesganga-jquery-loading-overlay": "^2.1.7"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}

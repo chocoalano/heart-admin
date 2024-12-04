@@ -1,0 +1,22 @@
+<div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
+    <div class="navbar-header">
+        <ul class="nav navbar-nav flex-row">       
+        <li class="nav-item mr-auto"><a class="navbar-brand" href="index.html">
+            <!-- <img class="brand-logo" alt="Thaldia" src=""/> -->
+            <h3 class="brand-text">MyHeart</h3></a></li>
+        <li class="nav-item d-md-none"><a class="nav-link close-navbar"><i class="ft-x"></i></a></li>
+        </ul>
+    </div>
+    <div class="main-menu-content">
+        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class="<% if(title_page === 'Dashboard') { %> active <%}else{%>nav-item <%}%>"><a href="/"><i class="ft-home"></i><span class="menu-title" data-i18n="">Dashboard</span></a></li>
+            <li class="<% if(title_page === 'Symptom') { %> active <%}else{%>nav-item <%}%>"><a href="/symptom"><i class="ft-list"></i><span class="menu-title" data-i18n="">Symptom</span></a></li>
+            <li class="<% if(title_page === 'Artikel') { %> active <%}else{%>nav-item <%}%>"><a href="/news"><i class="ft-list"></i><span class="menu-title" data-i18n="">Artikel</span></a></li>
+            <!-- <li class="<% //if(title_page === 'Banner') { %> active <% //}else{%>nav-item <% //}%>"><a href="/banners"><i class="ft-list"></i><span class="menu-title" data-i18n="">Banners</span></a></li> -->
+            <li class="<% if(title_page === 'Nurse') { %> active <%}else{%>nav-item <%}%>"><a href="/nurse"><i class="ft-list"></i><span class="menu-title" data-i18n="">Petugas</span></a></li>
+            <!-- <li class="<% //if(title_page === 'Donors') { %> active <% //}else{%>nav-item <% //}%>"><a href="/donors"><i class="ft-list"></i><span class="menu-title" data-i18n="">Blood Donors</span></a></li> -->
+            <li class="<% if(title_page === 'Users') { %> active <%}else{%>nav-item <%}%>"><a href="/users"><i class="ft-list"></i><span class="menu-title" data-i18n="">Users</span></a></li>
+        </ul>
+    </div>    
+    <div class="navigation-background"></div>
+</div>
